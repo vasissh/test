@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>GitHub Commit #0</title>
+</head>
+<body>
+    <div> 
+        <h1>Click button below!</h1>
+        <p>This is my first GitHub commit btw<br><s>i use arch btw</s></p>
+        <table>
+            <tr>
+                <th><button id="js-btn" alt="press for JS animation">Click me to view JS animation</button></th>
+                <th><button id="css-btn" alt="press for CSS animation">Click me to view CSS animation</button></th>
+            </tr>
+
+            <tr>
+                <td><p>JS</p> <img id="js-img" alt="circle" src="js.png"></td>
+                <td><p>CSS</p> <img id="css-img" alt="circle" src="css.png"></td>
+            </tr>
+        </table>
+        <p>Feel free to explore the project!</p>
+
+    </div>
+    
+    <div class="footer">
+        <h2> All credits to Vasili0k &copy;</h2>
+    </div>
+
+    <script>
+    const buttonCss = document.getElementById('css-btn'); // find button by id (= "css-btn")
+    const imgCss = document.getElementById('css-img'); // find img by id (="css-img")
+
+    const buttonJs = document.getElementById('js-btn'); // find button by id (= "js-btn")
+    const imgJs = document.getElementById('js-img'); // find img by id (="js-img")
+
+    buttonCss.addEventListener('click', function() {
+        imgCss.classList.toggle('css'); // by pressing the button the hue 
+    });
+
+    buttonJs.addEventListener('click', function(){
+         if(imgJs.style.transform === 'scale(1.5)') { // using <<if-else>> condition for imgJs size to be togglable
+            imgJs.style.transform = 'scale(1)'; // if scaling was applied, return to normal size
+        } else {
+            imgJs.style.transform = 'scale(1.5)'; // if scaling was not applied, aapply scale
+        }
+    })
+
+    </script>
+</body>
+</html>

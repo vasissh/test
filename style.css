@@ -1,0 +1,49 @@
+body {
+    background-color: #555;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2%;
+}
+
+button {
+    background-color: rgb(157, 76, 174);
+    color: #b9b9b9;
+    font-size: 15px;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* Proper display for styling */
+    cursor: pointer;
+    border-radius: 4px;
+
+    transition: background-color 0.1s ease-out, color 0.1s ease-out;
+}
+
+table {
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+button:hover {
+  background-color: rgb(110, 26, 99);
+  color: white;
+}
+
+.footer {
+    position: fixed;
+    background-color: #222;
+    color: #ffffff;
+    font-size: 69%;
+    text-align: right;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+.css {
+    filter: blur(3px);
+
+    transition: all 0.2s ease-out;
+}
