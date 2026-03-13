@@ -3,12 +3,16 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <title>GitHub Commit #0</title>
+    <title>GitHub Commit #1</title>
 </head>
 <body>
+    <div>
+        <button id="theme-btn">dark theme</button>
+    </div>
+
     <div> 
         <h1>Click button below!</h1>
-        <p>This is my first GitHub commit btw<br><s>i use arch btw</s></p>
+        <p>This is my <s>first</s> second GitHub commit btw<br></p>
         <table>
             <tr>
                 <th><button id="js-btn" alt="press for JS animation">Click me to view JS animation</button></th>
@@ -35,18 +39,33 @@
     const buttonJs = document.getElementById('js-btn'); // find button by id (= "js-btn")
     const imgJs = document.getElementById('js-img'); // find img by id (="js-img")
 
+    const buttonTheme = document.getElementById('theme-btn'); // theme toggle button :3
+    const bg = document.querySelector('.light-theme'); // find css class by id (=light-theme)
+
+        // 'CSS IMG EFFECTS'
     buttonCss.addEventListener('click', function() {
-        imgCss.classList.toggle('css'); // by pressing the button the hue 
+        imgCss.classList.toggle('blur'); // toggle blur by pressing the button ; blur stored in as '.css' class
     });
 
-    buttonJs.addEventListener('click', function(){
+        // 'JS IMG EFFECTS'
+    buttonJs.addEventListener('click', function(){ 
          if(imgJs.style.transform === 'scale(1.5)') { // using <<if-else>> condition for imgJs size to be togglable
             imgJs.style.transform = 'scale(1)'; // if scaling was applied, return to normal size
         } else {
-            imgJs.style.transform = 'scale(1.5)'; // if scaling was not applied, aapply scale
+            imgJs.style.transform = 'scale(1.5)'; // if scaling was not applied, apply scale
         }
-    })
+    });
 
+        // 'THEME TOGGLE'
+    buttonTheme.addEventListener('click', function(){
+        document.body.classList.toggle('light-theme'); // toggling bg color
+        if(this.innerText === 'dark theme') {
+            this.innerText = 'light theme'; // toggling text in the button
+        }
+        else {
+            this.innerText = 'dark theme';
+        }
+    });
     </script>
 </body>
 </html>

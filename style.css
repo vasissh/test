@@ -42,8 +42,25 @@ button:hover {
     width: 100%;
 }
 
-.css {
+.blur {
     filter: blur(3px);
 
     transition: all 0.2s ease-out;
+}
+
+#theme-btn {
+    position: fixed;
+    right: 10px;
+    background-color: black;
+}
+
+#theme-btn:hover {
+    position: fixed;
+    right: 10px;
+    background-color: rgb(31, 31, 31);
+}
+
+.light-theme {
+    background-color: #d1d1d1;
+    color: #222;
 }
